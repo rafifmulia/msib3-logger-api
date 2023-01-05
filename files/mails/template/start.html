@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+
+  <style>
+    @font-face {
+      font-family: 'PoppinsRegular';
+      src: url('<%= asset %>/font/Poppins.ttf');
+    }
+
+    html,
+    body {
+      font-family: 'PoppinsRegular' !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+      background: #f1f1f1 !important;
+    }
+
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+    a {
+      text-decoration: none !important;
+    }
+
+    *[x-apple-data-detectors],
+
+    .unstyle-auto-detected-links *,
+    .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    .a6S {
+      display: none !important;
+      opacity: 0.01 !important;
+    }
+
+    .im {
+      color: inherit !important;
+    }
+
+    /* CUSTOMAN */
+    .text-address {
+      margin: .25rem 0 1rem 0 !important;
+      font-size: 13px !important;
+    }
+
+    .text-help {
+      margin-bottom: .85rem !important;
+      font-size: 11px !important;
+      color: #6d7d89 !important;
+    }
+
+    .td-footer {
+      text-align: center !important;
+    }
+
+    .td-help {
+      text-align: center !important;
+      /* padding-right: 1.5rem !important; */
+    }
+
+    .tbl-footer {
+      margin: auto !important;
+    }
+
+    img.g-img+div {
+      display: none !important;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+      u~div .email-container {
+        min-width: 320px !important;
+      }
+    }
+
+    @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+      u~div .email-container {
+        min-width: 375px !important;
+      }
+    }
+
+    @media only screen and (min-device-width: 414px) {
+      u~div .email-container {
+        min-width: 414px !important;
+      }
+    }
+
+    .primary {
+      background: #E52920 !important;
+    }
+
+    .bg_white {
+      background: #ffffff !important;
+    }
+
+    .bg_light {
+      background: #fafafa !important;
+    }
+
+    .bg_muted {
+      background: #ededed !important;
+    }
+
+    .bg_black {
+      background: #000000 !important;
+    }
+
+    .bg_dark {
+      background: rgba(0, 0, 0, .8) !important;
+    }
+
+    .email-section {
+      padding: 1.5em !important;
+    }
+
+    .btn {
+      padding: 10px 15px !important;
+      display: inline-block !important;
+    }
+
+    .btn.btn-primary {
+      border-radius: 5px !important;
+      background: #E52920 !important;
+      color: #ffffff !important;
+    }
+
+    .btn.btn-white {
+      border-radius: 5px !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+    }
+
+    .btn.btn-white-outline {
+      border-radius: 5px !important;
+      background: transparent !important;
+      border: 1px solid #fff !important;
+      color: #fff !important;
+    }
+
+    .btn.btn-black-outline {
+      border-radius: 0px !important;
+      background: transparent !important;
+      border: 2px solid #000 !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'PoppinsRegular', sans-serif !important;
+      color: #212B36 !important;
+      margin-top: 0 !important;
+      font-weight: 400 !important;
+    }
+
+    body {
+      font-family: 'PoppinsRegular', sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      line-height: 1.8 !important;
+      color: rgba(0, 0, 0, .4) !important;
+    }
+
+    a {
+      color: #E52920 !important;
+    }
+
+    .logo h1 {
+      margin: 0 !important;
+    }
+
+    .logo h1 a {
+      color: #E52920 !important;
+      font-size: 24px !important;
+      font-weight: 700 !important;
+      font-family: 'PoppinsRegular', sans-serif !important;
+    }
+
+    .hero {
+      position: relative !important;
+      z-index: 0 !important;
+    }
+
+    .hero .text {
+      color: rgba(0, 0, 0, .3) !important;
+    }
+
+    .hero .text h2 {
+      color: #000 !important;
+      font-size: 40px !important;
+      margin-bottom: 0 !important;
+      font-weight: 400 !important;
+      line-height: 1.4 !important;
+    }
+
+    .hero .text h3 {
+      font-size: 24px !important;
+      font-weight: 300 !important;
+    }
+
+    .hero .text h2 span {
+      font-weight: 600 !important;
+      color: #E52920 !important;
+    }
+
+    .heading-section {}
+
+    .heading-section h2 {
+      color: #000000 !important;
+      font-size: 28px !important;
+      margin-top: 0 !important;
+      line-height: 1.4 !important;
+      font-weight: 400 !important;
+    }
+
+    .heading-section .subheading {
+      margin-bottom: 20px !important;
+      display: inline-block !important;
+      font-size: 13px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 2px !important;
+      color: rgba(0, 0, 0, .4) !important;
+      position: relative !important;
+    }
+
+    .heading-section .subheading::after {
+      position: absolute !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: -10px !important;
+      content: '' !important;
+      width: 100% !important;
+      height: 2px !important;
+      background: #E52920 !important;
+      margin: 0 auto !important;
+    }
+
+    .heading-section-white {
+      color: rgba(255, 255, 255, .8) !important;
+    }
+
+    .heading-section-white h2 {
+      /* font-family: line-height: 1 !important; */
+      padding-bottom: 0 !important;
+    }
+
+    .heading-section-white h2 {
+      color: #ffffff !important;
+    }
+
+    .heading-section-white .subheading {
+      margin-bottom: 0 !important;
+      display: inline-block !important;
+      font-size: 13px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 2px !important;
+      color: rgba(255, 255, 255, .4) !important;
+    }
+
+    ul.social {
+      padding: 0 !important;
+    }
+
+    ul.social li {
+      display: inline-block !important;
+      margin-right: 10px !important;
+    }
+
+    .footer {
+      /* border-top: 1px solid rgba(0, 0, 0, .05) !important; */
+      color: rgba(0, 0, 0, .5) !important;
+    }
+
+    .footer .heading {
+      color: #000 !important;
+      font-size: 20px !important;
+    }
+
+    .footer ul {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .footer ul li {
+      list-style: none !important;
+      margin-bottom: 10px !important;
+    }
+
+    .footer ul li a {
+      color: rgba(0, 0, 0, 1) !important;
+    }
+
+    @media screen and (max-width: 500px) {}
+  </style>
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f1f1f1;">
+  <center style="width: 100%; background-color: #f1f1f1;">
+    <div style="max-width: 710px; margin: 0 auto;" class="email-container">
+      <!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+        style="margin: auto; background-color: #f8f8f8">
+        <tr>
+          <td valign="top" class="" style=" padding: 1em 2.5em 0 2.5em;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td class="logo" style="text-align: center;">
+                  <img src="<%= asset %>/img/logo-red-brandnew.png" width="140px" alt="">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>

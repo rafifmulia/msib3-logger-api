@@ -1,0 +1,39 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: logger-node
+    container_name: logger-node
+    restart: unless-stopped
+    working_dir: /var/www/html/services/logger
+    volumes:
+      - .:/var/www/html/services/logger
+    ports:
+      - "${PORT}:${PORT}"
+    networks:
+      - logger-node
+    entrypoint: [ "/bin/sh", "-c" ]
+    command:
+      - |
+        mv /node_modules /var/www/html/services/logger/node_modules
+        npm run dev
+
+  redis:
+    image: redis:alpine
+    container_name: logger-redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT}:6379"
+    networks:
+      - logger-node
+    entrypoint: [ "/bin/sh", "-c" ]
+    command:
+      - |
+        redis-server
+
+networks:
+  logger-node:
+    name: logger-node
+    driver: bridge
